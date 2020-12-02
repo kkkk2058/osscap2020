@@ -38,6 +38,9 @@ arrayScreen = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],  # 14
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
 ]
-
-LED_init()
-draw_matrix(arrayScreen); print()
+def LED():
+    LED_init()
+    iScreen=Matrix(arrayScreen)
+    oScreen=Matrix(iScreen)
+    draw_matrix(oScreen);
+    print()
